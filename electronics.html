@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop laptops, smartphones, accessories and smart devices at Voltix.">
+  <title>Voltix | Electronics Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">⚡ Voltix</a>
+    <input id="searchInput" type="search"
+      placeholder="Search electronics, brands..." aria-label="Search products">
+    <button class="cart-button" id="cartButton">
+      🛒 Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">THE FUTURE IS HERE</span>
+        <h1>Technology that<br>moves you forward.</h1>
+        <p>Discover the latest devices, unbeatable deals, and smarter living.</p>
+        <a href="#catalog" class="primary-button">Explore Products →</a>
+      </div>
+      <div class="hero-art" aria-label="Featured electronics">💻</div>
+    </section>
+
+    <section class="categories">
+      <h2>Shop by category</h2>
+      <div class="category-list" id="categoryFilters">
+        <button class="category active" data-category="All">✦ All Products</button>
+        <button class="category" data-category="Laptops">💻 Laptops</button>
+        <button class="category" data-category="Smartphones">📱 Smartphones</button>
+        <button class="category" data-category="Accessories">🎧 Accessories</button>
+        <button class="category" data-category="Smart Devices">⌚ Smart Devices</button>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">CURATED FOR YOU</span>
+          <h2>Featured products</h2>
+        </div>
+        <span id="resultCount" class="muted"></span>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="compare-section" id="compareSection">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">MAKE THE RIGHT CHOICE</span>
+          <h2>Compare products</h2>
+        </div>
+        <button class="secondary-button" id="clearCompare">Clear comparison</button>
+      </div>
+      <p class="muted">Select up to three products using the Compare checkbox.</p>
+      <div class="table-wrapper">
+        <table id="compareTable">
+          <thead><tr><th>Specification</th><th colspan="3">Select products to compare</th></tr></thead>
+          <tbody><tr><td colspan="4">Choose products above to see their specifications.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <h2>Upgrade your everyday.</h2>
+      <p>Great technology. Better prices. One destination.</p>
+      <a href="#catalog" class="primary-button">Shop the collection</a>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">⚡ Voltix</a>
+    <p>© 2026 Voltix Electronics. Demo storefront.</p>
+    <p>Discover more. Do more.</p>
+  </footer>
+
+  <dialog id="productDialog" class="product-dialog">
+    <button class="dialog-close" id="closeDialog" aria-label="Close">✕</button>
+    <div id="productDetails"></div>
+  </dialog>
+
+  <dialog id="cartDialog" class="cart-dialog">
+    <button class="dialog-close" id="closeCart" aria-label="Close">✕</button>
+    <h2>Your shopping cart</h2>
+    <div id="cartItems"></div>
+    <div id="cartTotal" class="cart-total"></div>
+    <button class="primary-button full-width" id="checkoutButton">Proceed to checkout</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
